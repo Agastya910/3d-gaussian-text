@@ -102,6 +102,52 @@
             width: 100%;
             height: auto;
         }
+        /* Responsive image table styling */
+.image-comparison-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.image-comparison-table th {
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.image-comparison-table td {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.result-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .image-comparison-table th {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .image-comparison-table td {
+        min-width: 150px;
+    }
+}
     </style>
 </head>
 <body>
@@ -314,8 +360,8 @@
         </table>
         <p class="caption">Table 2: Average OCR Performance (WER and CER, No Fuzzy) for Original and Cropped Text Images</p>
         
-  <div class="full-width">
-    <table>
+<div class="full-width">
+    <table class="image-comparison-table">
         <tr>
             <th>Pose</th>
             <th>Ground Truth</th>
@@ -325,54 +371,56 @@
         </tr>
         <tr>
             <td>Pose 0</td>
-            <td><img src="images/00000_gt.png" alt="Pose 0 Ground Truth"></td>
-            <td><img src="images/00000_radial.png" alt="Pose 0 3DGS Radial"></td>
-            <td><img src="images/00000_text.png" alt="Pose 0 3DGS Text Loss"></td>
-            <td><img src="images/00000_textNorm.png" alt="Pose 0 3DGS Norm. Text Loss"></td>
+            <td><img src="images/00000_gt.png" alt="Pose 0 Ground Truth" class="result-image"></td>
+            <td><img src="images/00000_radial.png" alt="Pose 0 3DGS Radial" class="result-image"></td>
+            <td><img src="images/00000_text.png" alt="Pose 0 3DGS Text Loss" class="result-image"></td>
+            <td><img src="images/00000_textNorm.png" alt="Pose 0 3DGS Norm. Text Loss" class="result-image"></td>
         </tr>
         <tr>
             <td>Pose 1</td>
-            <td><img src="images/00001_gt.png" alt="Pose 1 Ground Truth"></td>
-            <td><img src="images/00001_radial.png" alt="Pose 1 3DGS Radial"></td>
-            <td><img src="images/00001_text.png" alt="Pose 1 3DGS Text Loss"></td>
-            <td><img src="images/00001_textNorm.png" alt="Pose 1 3DGS Norm. Text Loss"></td>
+            <td><img src="images/00001_gt.png" alt="Pose 1 Ground Truth" class="result-image"></td>
+            <td><img src="images/00001_radial.png" alt="Pose 1 3DGS Radial" class="result-image"></td>
+            <td><img src="images/00001_text.png" alt="Pose 1 3DGS Text Loss" class="result-image"></td>
+            <td><img src="images/00001_textNorm.png" alt="Pose 1 3DGS Norm. Text Loss" class="result-image"></td>
         </tr>
         <tr>
             <td>Pose 2</td>
-            <td><img src="images/00002_gt.png" alt="Pose 2 Ground Truth"></td>
-            <td><img src="images/00002_radial.png" alt="Pose 2 3DGS Radial"></td>
-            <td><img src="images/00002_text.png" alt="Pose 2 3DGS Text Loss"></td>
-            <td><img src="images/00002_textNorm.png" alt="Pose 2 3DGS Norm. Text Loss"></td>
+            <td><img src="images/00002_gt.png" alt="Pose 2 Ground Truth" class="result-image"></td>
+            <td><img src="images/00002_radial.png" alt="Pose 2 3DGS Radial" class="result-image"></td>
+            <td><img src="images/00002_text.png" alt="Pose 2 3DGS Text Loss" class="result-image"></td>
+            <td><img src="images/00002_textNorm.png" alt="Pose 2 3DGS Norm. Text Loss" class="result-image"></td>
         </tr>
         <tr>
             <td>Pose 3</td>
-            <td><img src="images/00003_gt.png" alt="Pose 3 Ground Truth"></td>
-            <td><img src="images/00003_radial.png" alt="Pose 3 3DGS Radial"></td>
-            <td><img src="images/00003_text.png" alt="Pose 3 3DGS Text Loss"></td>
-            <td><img src="images/00003_textNorm.png" alt="Pose 3 3DGS Norm. Text Loss"></td>
+            <td><img src="images/00003_gt.png" alt="Pose 3 Ground Truth" class="result-image"></td>
+            <td><img src="images/00003_radial.png" alt="Pose 3 3DGS Radial" class="result-image"></td>
+            <td><img src="images/00003_text.png" alt="Pose 3 3DGS Text Loss" class="result-image"></td>
+            <td><img src="images/00003_textNorm.png" alt="Pose 3 3DGS Norm. Text Loss" class="result-image"></td>
         </tr>
         <tr>
             <td>Pose 4</td>
-            <td><img src="images/00004_gt.png" alt="Pose 4 Ground Truth"></td>
-            <td><img src="images/00004_radial.png" alt="Pose 4 3DGS Radial"></td>
-            <td><img src="images/00004_text.png" alt="Pose 4 3DGS Text Loss"></td>
-            <td><img src="images/00004_textNorm.png" alt="Pose 4 3DGS Norm. Text Loss"></td>
+            <td><img src="images/00004_gt.png" alt="Pose 4 Ground Truth" class="result-image"></td>
+            <td><img src="images/00004_radial.png" alt="Pose 4 3DGS Radial" class="result-image"></td>
+            <td><img src="images/00004_text.png" alt="Pose 4 3DGS Text Loss" class="result-image"></td>
+            <td><img src="images/00004_textNorm.png" alt="Pose 4 3DGS Norm. Text Loss" class="result-image"></td>
         </tr>
         <tr>
             <td>Pose 5</td>
-            <td><img src="images/00005_gt.png" alt="Pose 5 Ground Truth"></td>
-            <td><img src="images/00005_radial.png" alt="Pose 5 3DGS Radial"></td>
-            <td><img src="images/00005_text.png" alt="Pose 5 3DGS Text Loss"></td>
-            <td><img src="images/00005_textNorm.png" alt="Pose 5 3DGS Norm. Text Loss"></td>
+            <td><img src="images/00005_gt.png" alt="Pose 5 Ground Truth" class="result-image"></td>
+            <td><img src="images/00005_radial.png" alt="Pose 5 3DGS Radial" class="result-image"></td>
+            <td><img src="images/00005_text.png" alt="Pose 5 3DGS Text Loss" class="result-image"></td>
+            <td><img src="images/00005_textNorm.png" alt="Pose 5 3DGS Norm. Text Loss" class="result-image"></td>
         </tr>
         <tr>
             <td>Pose 6</td>
-            <td><img src="images/00006_gt.png" alt="Pose 6 Ground Truth"></td>
-            <td><img src="images/00006_radial.png" alt="Pose 6 3DGS Radial"></td>
-            <td><img src="images/00006_text.png" alt="Pose 6 3DGS Text Loss"></td>
-            <td><img src="images/00006_textNorm.png" alt="Pose 6 3DGS Norm. Text Loss"></td>
+            <td><img src="images/00006_gt.png" alt="Pose 6 Ground Truth" class="result-image"></td>
+            <td><img src="images/00006_radial.png" alt="Pose 6 3DGS Radial" class="result-image"></td>
+            <td><img src="images/00006_text.png" alt="Pose 6 3DGS Text Loss" class="result-image"></td>
+            <td><img src="images/00006_textNorm.png" alt="Pose 6 3DGS Norm. Text Loss" class="result-image"></td>
         </tr>
     </table>
+    <p class="caption">Table 3: Comparison of Rendered Images for 3DGS Radial, Text Loss, and Normalized Text Loss Against Ground Truth on the TextNeRF Dataset (Scene 15)</p>
+</div>
     <p class="caption">Table 3: Comparison of Rendered Images for 3DGS Radial, Text Loss, and Normalized Text Loss Against Ground Truth on the TextNeRF Dataset (Scene 15)</p>
 </div>
             <p class="caption">Table 3: Comparison of Rendered Images for 3DGS Radial, Text Loss, and Normalized Text Loss Against Ground Truth on the TextNeRF Dataset (Scene 15)</p>
